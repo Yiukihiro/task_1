@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// import 'text.dart';
+import 'slider.dart';
 
 class TextControl extends StatelessWidget {
   final VoidCallback changerInex;
@@ -9,22 +9,22 @@ class TextControl extends StatelessWidget {
 
   TextControl(this.changerInex, this.index);
 
-  String get changerPhrase {
-    String getPhrase = '';
+  // String get changerPhrase {
+  //   String getPhrase = '';
 
-    if (index == 0) {
-      getPhrase = 'First Vision of text';
-    } else if (index == 1) {
-      getPhrase = 'Second Vision of text';
-    } else if (index == 2) {
-      getPhrase = 'Third Vision of text';
-    } else if (index == 3) {
-      getPhrase = 'Fourth Vision of text';
-    } else if (index == 4) {
-      getPhrase = 'Fifth Vision of text';
-    }
-    return getPhrase;
-  }
+  //   if (index == 0) {
+  //     getPhrase = 'First Vision of text';
+  //   } else if (index == 1) {
+  //     getPhrase = 'Second Vision of text';
+  //   } else if (index == 2) {
+  //     getPhrase = 'Third Vision of text';
+  //   } else if (index == 3) {
+  //     getPhrase = 'Fourth Vision of text';
+  //   } else if (index == 4) {
+  //     getPhrase = 'Fifth Vision of text';
+  //   }
+  //   return getPhrase;
+  // }
 
 
   @override
@@ -32,7 +32,7 @@ class TextControl extends StatelessWidget {
     return Column(
       children: [
         Center(
-          child: Text(changerPhrase),
+          child: Text(slider[index]['text'] as String),  //child: Text(changerPhrase), для сеттера
         ),
         ElevatedButton(
           onPressed: changerInex,
