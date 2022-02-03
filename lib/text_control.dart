@@ -7,7 +7,7 @@ class TextControl extends StatelessWidget {
   final int index;
   // final String getPhrase;
 
-  TextControl(this.changerInex, this.index);
+  const TextControl(this.changerInex, this.index, {Key? key}) : super(key: key);
 
   // String get changerPhrase {
   //   String getPhrase = '';
